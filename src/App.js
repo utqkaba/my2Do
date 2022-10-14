@@ -6,7 +6,7 @@ import DayMonthYear from './components/dayMonthYear'
 import { FaGithub } from 'react-icons/fa'
 
 export default function App() {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(() => JSON.parse(localStorage.getItem("tasks")) || []);
 
   useEffect(() => {
     localStorage.setItem('tasks', JSON.stringify(tasks));
