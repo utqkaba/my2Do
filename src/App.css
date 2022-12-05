@@ -97,12 +97,12 @@ form {
   word-break: break-word;
 }
 
-.false {
+.completedTask {
   text-decoration-line: line-through;
   text-decoration-color: red;
 }
 
-.true {
+.uncompletedTask {
   text-decoration-line: none;
 }
 
@@ -286,7 +286,7 @@ form {
   background-color: #ff0000;
 }
 
-/* When the checkbox is checked, add a blue background */
+/* When the checkbox is checked, add a whitesmoke background */
 .checkContainer input:checked ~ .checkmark {
   background-color: whitesmoke;
 }
