@@ -65,7 +65,7 @@ export default function App() {
   };
 
   return (
-    <div>
+    <div className="generalContainer">
       <header className="header">
         <a
           className="goGit"

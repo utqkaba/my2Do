@@ -367,3 +367,15 @@ form {
 ::placeholder {
   font-family: "Poiret One", sans-serif;
 }
+
+@media (max-width: 1200px) {
+  .generalContainer {
+    transform: scale(0.7);
+  }
+}
+
+@media (max-width: 600px) {
+  .generalContainer {
+    transform: scale(0.5);
+  }
+}
