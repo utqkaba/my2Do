@@ -33,7 +33,7 @@ export default function todoTasks(props) {
             <span
               className={
                 tasks[index].completed ? "completedTask" : "uncompletedTask"
-              }
+              } contenteditable="true"
             >
               {task.task}
             </span>
