@@ -74,7 +74,7 @@ export default function App() {
           rel="noreferrer"
         >
           {" "}
-          <FaGithub />{" "}
+          <FaGithub style={{ fontSize: "28px" }} />{" "}
         </a>
       </header>
       <DayMonthYear />
