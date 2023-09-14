@@ -100,10 +100,12 @@ form {
 .completedTask {
   text-decoration-line: line-through;
   text-decoration-color: red;
+  margin-right: 40px;
 }
 
 .uncompletedTask {
   text-decoration-line: none;
+  margin-right: 40px;
 }
 
 .trash {
