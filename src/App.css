@@ -12,11 +12,10 @@
   align-items: center;
 }
 
-.toDoApp {
-  /* width: 500px; */
+/* .toDoApp {
   width: 36vw;
   align-items: center;
-}
+} */
 
 body {
   background-image: linear-gradient(
@@ -371,21 +370,21 @@ form {
   font-family: "Poiret One", sans-serif;
 }
 
-@media (max-width: 3000px) {
+@media (max-width: 2000px) {
   .toDoApp {
     /* width: 500px; */
-    width: 30.5vw;
+    width: 33.5vw;
     align-items: center;
   }
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 1600px) {
   .generalContainer {
-    transform: scale(0.7);
+    transform: scale(1);
   }
   .toDoApp {
     /* width: 500px; */
-    width: 34vw;
+    width: 30.5vw;
     align-items: center;
   }
 }
