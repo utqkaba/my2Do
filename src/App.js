@@ -89,6 +89,7 @@ export default function App() {
           handleComplete={handleComplete}
           handleRemove={handleRemove}
           handleRemoveAll={handleRemoveAll}
+          setTasks={setTasks}
         />
       </div>
     </div>
