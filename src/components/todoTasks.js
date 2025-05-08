@@ -1,11 +1,25 @@
-// import React, { useState } from 'react'
-import React from "react";
 import { FaEraser } from "react-icons/fa";
 
-export default function todoTasks(props) {
-  // const [complete, setComplete] = useState(false);
+export default function TodoTasks(props) {
+  const { tasks, handleComplete, handleRemove, handleRemoveAll, setTasks } =
+    props;
 
-  const { tasks, handleComplete, handleRemove, handleRemoveAll } = props;
+  const handleBlur = (e, index) => {
+    const newText = e.target.innerText.trim();
+    if (newText === tasks[index].task) return;
+
+    const updatedTasks = [...tasks];
+    updatedTasks[index].task = newText;
+    setTasks(updatedTasks);
+    localStorage.setItem("tasks", JSON.stringify(updatedTasks));
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      e.target.blur();
+    }
+  };
 
   return (
     <ul className="todo">
@@ -13,49 +27,33 @@ export default function todoTasks(props) {
         <li key={index}>
           <div className="checkAndTask">
             <label className="checkContainer">
-              {/* <input type="checkbox" onClick={() => [handleComplete(index), setComplete(!complete)]} /> */}
-              {tasks[index].completed ? (
-                <input
-                  type="checkbox"
-                  onClick={() => handleComplete(index)}
-                  checked
-                />
-              ) : (
-                <input
-                  type="checkbox"
-                  onClick={() => handleComplete(index)}
-                  unchecked
-                />
-              )}
-              {/* <input type="checkbox" onClick={() => handleComplete(index)} /> */}
-              <span className="checkmark"> </span>
+              <input
+                type="checkbox"
+                onClick={() => handleComplete(index)}
+                checked={task.completed}
+                readOnly
+              />
+              <span className="checkmark"></span>
             </label>
             <span
-              className={
-                tasks[index].completed ? "completedTask" : "uncompletedTask"
-              } contenteditable="true"
+              className={task.completed ? "completedTask" : "uncompletedTask"}
+              contentEditable
+              suppressContentEditableWarning
+              onBlur={(e) => handleBlur(e, index)}
+              onKeyDown={handleKeyDown}
             >
               {task.task}
             </span>
           </div>
-          {/* <button className='trash' onClick={() => handleUpdate(index)}> <FaEraser style={{ fontSize: '16px' }} /></button> */}
           <button className="trash" onClick={() => handleRemove(index)}>
-            {" "}
             <FaEraser style={{ fontSize: "16px" }} />
           </button>
-          {/* <button className='trash' onClick={tasks[index].completed ? () => handleRemove(index) : <span class="popuptext" id="myPopup">Popup text...</span>}> <FaEraser style={{ fontSize: '16px' }} /></button> */}
         </li>
       ))}
-      {/* {tasks.length > 1 && <p> <button className='deleteAll' onClick={() => handleRemoveAll()}> <i><FaEraser /></i> Delete All </button></p>} */}
       {tasks.length > 0 && <hr className="endLine" />}
-      {/* {tasks.length > 1 && <button class="button-49" onClick={() => handleRemoveAll()}> <i><FaEraser style={{ fontSize: '16px' }} /></i> Just Delete Completed Task</button>} */}
       {tasks.length > 1 && (
-        <button class="button-49" onClick={() => handleRemoveAll()}>
-          {" "}
-          Delete All{" "}
-          <i>
-            <FaEraser style={{ fontSize: "16px" }} />
-          </i>
+        <button className="button-49" onClick={handleRemoveAll}>
+          Delete All <FaEraser style={{ fontSize: "16px" }} />
         </button>
       )}
     </ul>
