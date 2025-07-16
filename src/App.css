@@ -90,7 +90,7 @@ form {
   margin: 20px 0;
   background-color: transparent;
   border-radius: 5px;
-  padding: 15px 10px 15px 0px;
+  padding: 15px 15px 15px 10px;
   justify-content: space-between;
   font-family: "Poiret One", sans-serif;
   font-size: 24px;
@@ -374,8 +374,7 @@ form {
 
 @media (max-width: 2000px) {
   .toDoApp {
-    /* width: 500px; */
-    width: 33.5vw;
+    width: 37vw;
     align-items: center;
   }
 }
@@ -385,8 +384,7 @@ form {
     transform: scale(1);
   }
   .toDoApp {
-    /* width: 500px; */
-    width: 28.5vw;
+    width: 33vw;
     align-items: center;
   }
 }
@@ -396,8 +394,7 @@ form {
     transform: scale(0.5);
   }
   .toDoApp {
-    /* width: 500px; */
-    width: 36vw;
+    width: 39vw;
     align-items: center;
   }
 }
