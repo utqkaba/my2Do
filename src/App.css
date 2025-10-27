@@ -90,10 +90,10 @@ form {
   margin: 20px 0;
   background-color: transparent;
   border-radius: 5px;
-  padding: 15px 15px 15px 10px;
+  padding: 5px 13px 5px 15px;
   justify-content: space-between;
   font-family: "Poiret One", sans-serif;
-  font-size: 24px;
+  font-size: 22px;
   word-break: break-word;
 }
 
@@ -148,7 +148,7 @@ form {
   width: 120px;
   height: 38px;
   line-height: 40px;
-  font-size: 20px;
+  font-size: 18px;
   font-family: "Poiret One", sans-serif;
   background: linear-gradient(45deg, transparent 100%, #ff013c 100%);
   cursor: pointer;
@@ -321,9 +321,9 @@ form {
 .dayMonthYear {
   color: white;
   text-align: center;
-  padding: 12px;
+  padding: 8px;
   font-family: "Poiret One", sans-serif;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .goGit {
@@ -374,7 +374,7 @@ form {
 
 @media (max-width: 2000px) {
   .toDoApp {
-    width: 37vw;
+    width: 35vw;
     align-items: center;
   }
 }
@@ -384,7 +384,7 @@ form {
     transform: scale(1);
   }
   .toDoApp {
-    width: 33vw;
+    width: 31vw;
     align-items: center;
   }
 }
@@ -394,7 +394,7 @@ form {
     transform: scale(0.5);
   }
   .toDoApp {
-    width: 39vw;
+    width: 37vw;
     align-items: center;
   }
 }

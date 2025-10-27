@@ -53,7 +53,7 @@ export default function TodoTasks(props) {
       {tasks.length > 0 && <hr className="endLine" />}
       {tasks.length > 1 && (
         <button className="button-49" onClick={handleRemoveAll}>
-          Delete All <FaEraser style={{ fontSize: "16px" }} />
+          Delete All <FaEraser style={{ fontSize: "14px" }} />
         </button>
       )}
     </ul>
