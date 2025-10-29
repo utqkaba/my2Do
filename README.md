@@ -1,4 +1,4 @@
-https://my2-do.netlify.app/
+https://m2do.netlify.app/
 
 A simple to-do list app powered by React, React icons. Save in Local Storage.
 
